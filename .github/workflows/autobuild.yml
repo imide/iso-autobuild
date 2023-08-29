@@ -47,11 +47,11 @@ jobs:
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
-         repo_name: endeavouros-team/development-iso-testing
+         repo_name: imide/iso-autobuild
          repo_token: ${{ secrets.ACCESS_TOKEN }}
          file: EndeavourOS-ISO/out/unstable.tar.gz
-         asset_name: ${{ env.NOW }}-unstable.tar.gz
+         asset_name: ${{ env.NOW }}-git.tar.gz
          tag: ${{ env.NOW }}
          prerelease: true
          overwrite: false
-         body: "latest unstable iso"
+         body: "latest git with my configs (soon) iso"
